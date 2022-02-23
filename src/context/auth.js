@@ -6,6 +6,7 @@ const AuthDispatchContext = createContext();
 
 let user = null;
 
+// Get token from localStorage
 const token = localStorage.getItem("userInfo");
 if (token) {
   const decodedToken = jwtDecode(token);
@@ -18,6 +19,7 @@ if (token) {
   }
 }
 
+// Get profile picture from localStorage which was set by the reducer
 const picture = localStorage.getItem("profilePicture");
 
 const authReducer = (state, action) => {

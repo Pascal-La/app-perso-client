@@ -1,4 +1,5 @@
 import { Switch } from "react-router-dom";
+
 import { AuthProvider } from "./context/auth";
 
 import Account from "./pages/Account";

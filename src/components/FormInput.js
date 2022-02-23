@@ -26,7 +26,8 @@ export const UserInput = ({
         value={value}
         onChange={handleChange}
         onFocus={disableErrors}
-        className={`text-black h-8 w-full mt-1 rounded-sm px-2 focus:outline-none focus:bg-purple-200
+        className={`text-black h-8 w-full mt-1 rounded-sm px-2
+        focus:outline-none focus:bg-purple-200
         ${errors && "text-red-700 bg-red-200/70"}
         ${errors || value.includes(" ") ? "mb-0" : "mb-5"}
         `}
@@ -67,15 +68,15 @@ export const PasswordInput = ({
           value={value}
           onChange={handleChange}
           onFocus={disableErrors}
-          className={`text-black h-8 w-full rounded-sm px-2 focus:outline-none focus:bg-purple-200 ${
-            errors && "text-red-700 bg-red-200/70"
-          }
-          `}
+          className={`text-black h-8 w-full rounded-sm px-2 focus:outline-none
+          focus:bg-purple-200 ${errors && "text-red-700 bg-red-200/70"}`}
         />
         {value && (
           <button
             type="button"
-            className="flex justify-center items-center w-1/12 h-8 bg-pink-400/30 hover:bg-sky-500/20 focus:outline-none focus:bg-sky-500/20 rounded-sm transition-all"
+            className="flex justify-center items-center w-1/12 h-8
+            bg-pink-400/30 hover:bg-sky-500/20 focus:outline-none
+            focus:bg-sky-500/20 rounded-sm transition-all"
             onClick={isVisible}
           >
             {isEyeOpen}
@@ -98,7 +99,10 @@ export const SubmitButton = ({
     <>
       <button
         type="submit"
-        className="flex items-center justify-center w-full h-10 p-2 rounded-sm mt-5 shadow-md bg-gradient-to-r from-sky-400/20 to-pink-400/20 hover:bg-sky-600/20 focus:outline-none focus:bg-sky-600/20 transition-all"
+        className="flex items-center justify-center w-full h-10 p-2
+        rounded-sm mt-5 shadow-md bg-gradient-to-r from-sky-400/20
+        to-pink-400/20 hover:bg-sky-600/20 focus:outline-none
+        focus:bg-sky-600/20 transition-all"
       >
         {loading ? (
           <AiOutlineLoading3Quarters className="animate-spin" />

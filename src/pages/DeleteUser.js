@@ -22,6 +22,7 @@ const DeleteUser = () => {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
 
+  // Check credentials before deleting
   const submitLoginForm = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -49,6 +50,7 @@ const DeleteUser = () => {
     }
   };
 
+  // Delete account after checking credentials
   const confirmDelete = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -79,7 +81,11 @@ const DeleteUser = () => {
   const ConfirmationModal = () => {
     return (
       <TransparentModal onClick={() => setShowDeleteModal(false)}>
-        <div className="flex flex-wrap items-center justify-center m-3 p-8 w-full md:w-8/12 lg:w-6/12 h-2/5 bg-gradient-to-br from-sky-600/90 to-purple-600 rounded-md shadow-lg">
+        <div
+          className="flex flex-wrap items-center justify-center m-3 p-8
+        w-full md:w-8/12 lg:w-6/12 h-2/5 bg-gradient-to-br from-sky-600/90
+        to-purple-600 rounded-md shadow-lg"
+        >
           <div className="w-full text-center ">
             <h1 className="text-2xl font-bold mb-6">
               Supprimer votre compte ?
@@ -88,13 +94,15 @@ const DeleteUser = () => {
           </div>
 
           <button
-            className="w-36 p-3 m-1 rounded-sm shadow-md bg-red-600/80 hover:bg-red-600 focus:outline-none transition-all"
+            className="w-36 p-3 m-1 rounded-sm shadow-md bg-red-600/80
+            hover:bg-red-600 focus:outline-none transition-all"
             onClick={confirmDelete}
           >
             Oui, je confirme
           </button>
           <button
-            className="w-36 p-3 m-1 rounded-sm shadow-md bg-sky-600/80 hover:bg-sky-600 focus:outline-none transition-all"
+            className="w-36 p-3 m-1 rounded-sm shadow-md bg-sky-600/80
+            hover:bg-sky-600 focus:outline-none transition-all"
             onClick={() => setShowDeleteModal(false)}
           >
             Non, j'annule
@@ -108,9 +116,14 @@ const DeleteUser = () => {
     <>
       {showDeleteModal && <ConfirmationModal />}
       <Navbar />
-      <div className="flex items-center justify-center min-h-screen px-3 text-white bg-gradient-to-br from-sky-800 via-purple-800 to-pink-800">
+      <div
+        className="flex items-center justify-center min-h-screen px-3
+      text-white bg-gradient-to-br from-sky-800 via-purple-800
+      to-pink-800"
+      >
         <form
-          className="bg-sky-300/20 p-10 rounded-sm shadow-md w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
+          className="bg-sky-300/20 p-10 rounded-sm shadow-md w-full
+          sm:w-1/2 lg:w-1/3 xl:w-1/4"
           onSubmit={submitLoginForm}
         >
           <h1 className="text-center text-2xl mb-5">
@@ -165,9 +178,10 @@ const DeleteUser = () => {
 
           <button
             type="submit"
-            className={`flex items-center justify-center w-full h-10 p-2 rounded-sm shadow-md bg-red-600/80 hover:bg-red-600 focus:outline-none focus:bg-red-600 transition-all
-            ${errors.errors && errors.errors.password ? "mt-5" : "mt-10"}
-            `}
+            className={`flex items-center justify-center w-full h-10 p-2
+            rounded-sm shadow-md bg-red-600/80 hover:bg-red-600
+            focus:outline-none focus:bg-red-600 transition-all
+            ${errors.errors && errors.errors.password ? "mt-5" : "mt-10"}`}
           >
             {loading ? (
               <AiOutlineLoading3Quarters className="animate-spin" />

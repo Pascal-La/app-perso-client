@@ -117,9 +117,14 @@ const UpdateUser = () => {
       )}
 
       <Navbar />
-      <div className="flex items-center justify-center min-h-screen pt-14 px-3 text-white bg-gradient-to-br from-sky-800 via-purple-800 to-pink-800">
+      <div
+        className="flex items-center justify-center min-h-screen pt-14
+      px-3 text-white bg-gradient-to-br from-sky-800 via-purple-800
+      to-pink-800"
+      >
         <form
-          className="bg-sky-300/20 p-10 rounded-sm shadow-md w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
+          className="bg-sky-300/20 p-10 rounded-sm shadow-md w-full
+          sm:w-1/2 lg:w-1/3 xl:w-1/4"
           onSubmit={submitUpdateForm}
         >
           <h1 className="text-center text-2xl mb-5">
@@ -221,7 +226,8 @@ const UpdateUser = () => {
             accountInfo="Supprimer votre compte ?"
             pageInfo="Cliquez ici"
             page="/account/delete"
-            color="text-red-600 hover:text-red-400 focus:outline-none focus:text-pink-200"
+            color="text-red-600 hover:text-red-400 focus:outline-none
+            focus:text-pink-200"
           />
         </form>
       </div>

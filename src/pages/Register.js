@@ -90,9 +90,14 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-3 text-white bg-gradient-to-br from-sky-800 via-purple-800 to-pink-800">
+    <div
+      className="flex items-center justify-center min-h-screen px-3
+    text-white bg-gradient-to-br from-sky-800 via-purple-800
+    to-pink-800"
+    >
       <form
-        className="bg-sky-300/20 p-10 rounded-sm shadow-md w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
+        className="bg-sky-300/20 p-10 rounded-sm shadow-md w-full
+        sm:w-1/2 lg:w-1/3 xl:w-1/4"
         onSubmit={submitRegisterForm}
         encType="multipart/form-data"
       >
@@ -179,9 +184,8 @@ const Register = () => {
             src={updatePreview}
             alt="profil"
             onClick={handleSelectPicture}
-            className={`w-32 h-32 rounded-full object-cover mb-5 ${
-              showPictureInfos ? "mt-3" : "mt-8"
-            } `}
+            className={`w-32 h-32 rounded-full object-cover mb-5
+            ${showPictureInfos ? "mt-3" : "mt-8"} `}
           />
         </div>
 
@@ -192,7 +196,8 @@ const Register = () => {
           accountInfo="Vous avez déjà un compte ?"
           pageInfo="Se connecter"
           page="/login"
-          color="text-sky-200 hover:text-pink-200 focus:outline-none focus:text-pink-200"
+          color="text-sky-200 hover:text-pink-200 focus:outline-none
+          focus:text-pink-200"
         />
       </form>
     </div>

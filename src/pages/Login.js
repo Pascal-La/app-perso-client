@@ -22,7 +22,7 @@ const Login = () => {
 
   const dispatch = useAuthDispatch();
 
-  // Switch to connect with email or username
+  // Connection with email or username and erase the field by switching
   const handleSwitchInput = () => {
     setLoginEmail(!loginEmail);
     setEmail("");
@@ -57,9 +57,14 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-3 text-white bg-gradient-to-br from-sky-800 via-purple-800 to-pink-800">
+    <div
+      className="flex items-center justify-center min-h-screen px-3
+    text-white bg-gradient-to-br from-sky-800 via-purple-800
+    to-pink-800"
+    >
       <form
-        className="bg-sky-300/20 p-10 rounded-sm shadow-md w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
+        className="bg-sky-300/20 p-10 rounded-sm shadow-md w-full
+        sm:w-1/2 lg:w-1/3 xl:w-1/4"
         onSubmit={submitLoginForm}
       >
         <h1 className="text-center text-2xl">Connexion</h1>
@@ -67,7 +72,8 @@ const Login = () => {
         <p className="text-xs text-center text-gray-200 mb-5">
           avec{" "}
           <span
-            className="text-sky-200 text-base font-semibold cursor-pointer hover:text-pink-200 transition-all"
+            className="text-sky-200 text-base font-semibold
+            cursor-pointer hover:text-pink-200 transition-all"
             onClick={handleSwitchInput}
           >
             {loginEmail ? "pseudo " : "email "}
@@ -127,7 +133,8 @@ const Login = () => {
           accountInfo="Vous n'avez pas de compte ?"
           pageInfo="S'inscrire"
           page="/register"
-          color="text-sky-200 hover:text-pink-200 focus:outline-none focus:text-pink-200"
+          color="text-sky-200 hover:text-pink-200 focus:outline-none
+          focus:text-pink-200"
         />
       </form>
     </div>
