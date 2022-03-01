@@ -2,6 +2,10 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
+  "repository": "https://github.com/Pascal-La/app-perso-client.git",
+  "author": "PascalPromoTrinity <lapascal89@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
